@@ -15,4 +15,3 @@ describe('secondary button', () => {
         expect(secondary).toMatchSnapshot()
     })
 })
-
