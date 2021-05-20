@@ -1,8 +1,13 @@
+import Image from 'next/image';
+import Head from 'next/head'
+
 import Layout from '../../components/layout';
 import Date from '../../components/date';
-import Image from 'next/image';
 
 import utilStyles from '../../styles/util.module.scss';
+
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from 'rehype-raw'
 
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import { GetStaticPaths, GetStaticProps } from 'next';
@@ -17,6 +22,7 @@ export default function Post({
     pageTitle: string
     desc: string
     imgName: string
+    markdown: string
   }
 }) {
   return (
@@ -25,6 +31,12 @@ export default function Post({
       description={postData.desc}
       previewImage={postData.imgName}
     >
+      <Head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/default.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+      </Head>
+
       <article>
         <Image
           priority
@@ -37,7 +49,7 @@ export default function Post({
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <ReactMarkdown children={postData.contentHtml} rehypePlugins={[rehypeRaw]} />
       </article>
     </Layout>
   );

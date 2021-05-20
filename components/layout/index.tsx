@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
+
 import styles from './layout.module.scss';
 import utilStyles from '../../styles/util.module.scss';
-import Link from 'next/link';
 
 const twitterHandle = 'bricewduke';
 export const siteName = 'Brice Duke';

@@ -22,7 +22,7 @@ You will learn the basic fundamentals of Javascript - hopefully enough to determ
 
 If you're on anything with a keyboard, you'll be able to follow along with the projects. Here's how to get set up:
 
-Do `ctrl`+`shift`+`J` (`cmd`+`shift`+`J` on Mac) to open up your browser console; that'll be our workspace for this crash course! Feel free to resize the console window by dragging on the edges of it.
+Do ctrl + shift + J (cmd + shift + J on Mac) to open up your browser console; that'll be our workspace for this crash course! Feel free to resize the console window by dragging on the edges of it.
 
 Let's begin with the basics:
 
@@ -30,17 +30,17 @@ Let's begin with the basics:
 
 In your console, go ahead and try typing in your favorite number, followed by a `+`, and lastly, type `10`. Now hit enter, and voila, you added 10 to your favorite number! That's how easy math operations are in Javascript. Here's a list of the main operators:
 
-- `+`, `-`, `*`, and `/` are self-explanatory
-- `%` is the modulo operation, which is the remainder of a division; type in `7 % 4` and see for yourself!
-- `**` represents exponents... Typing in `7**2` will return `49`
-- `===` will compare two things and return `true` if they're equivalent. If you type in `7 === 4`, what happens?
-- `!==` will compare two things and return `True` if they're not equivalent, so `7 !== 4` should be true!
-- `>` and `<` compare two things to see if they're greater or less than (`7 > 4` returns `true`, and `7 < 4` returns `false`)
-- `>=` and `<=` are greater/less than OR equal to (`7 >= 7` is `true`, `4 <= 7` is also `true` - but don't take my word for it, try it out!)
-- `||` compares two things and returns true if one condition is met (think of it like "or")
-- `&&` compares two things and returns true if both conditions are met (think of it like "and")
+- +, -, \*, and / are self-explanatory
+- % is the modulo operation, which is the remainder of a division; type in 7 % 4 and see for yourself!
+- ** represents exponents... Typing in 7**2 will return 49
+- === will compare two things and return true if they're equivalent. If you type in 7 === 4, what happens?
+- !== will compare two things and return True if they're not equivalent, so 7 !== 4 should be true!
+- > and < compare two things to see if they're greater or less than (7 > 4 returns true, and 7 < 4 returns false)
+- > = and <= are greater/less than OR equal to (7 >= 7 is true, 4 <= 7 is also true - but don't take my word for it, try it out!)
+- || compares two things and returns true if one condition is met (think of it like "or")
+- && compares two things and returns true if both conditions are met (think of it like "and")
 
-Typing in `(1 + 2) * 3` will give us 9. **Operators follow the order of operations**, so Javascript would evaluate math in the parenthesis first!
+Typing in (1 + 2) \* 3 will give us 9. **Operators follow the order of operations**, so Javascript would evaluate math in the parenthesis first!
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/av0y5iy6glrnt5q2bqxc.gif)
 
