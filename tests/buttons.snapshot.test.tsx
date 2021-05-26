@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Primary, Secondary } from '../buttons'
+import { Primary, Secondary } from '../components/buttons'
 import renderer from 'react-test-renderer'
 
 describe('primary button', () => {

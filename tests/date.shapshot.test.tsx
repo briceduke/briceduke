@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Date from '../date'
+import Date from '../components/date'
 import renderer from 'react-test-renderer'
 
 it('renders correctly', () => {
