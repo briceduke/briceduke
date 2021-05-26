@@ -185,7 +185,7 @@ If you like Javascript so far, I really recommend you learn some more and maybe 
 
 **Before you leave, read this:**
 
-1. I'd like to thank you for giving this post a view, it really means a lot to me! Let me know how I'm doing in the comments, or leave a like, follow, or an infamous Unicorn if you really liked it 🦄
+1. I'd like to thank you for giving this post a view, it really means a lot to me! Let me know how I'm doing too.
 2. Like I said, stay tuned because there are a lot more articles coming for every type of programmer!
 3. Never stop learning, never stop practicing. There's always something you can do to improve, so get out there and keep going! I believe in you 😇
 
