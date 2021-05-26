@@ -6,7 +6,7 @@ imgName: 'python-asap.png'
 desc: 'This specific article will be targeted towards complete beginners, as I will be going over basic programming concepts; more advanced programmers are certainly welcome to peruse, though!'
 ---
 
-Hello there! I've been a DEV reader for a long time, but just recently I decided to make an account and maybe start posting. I want to share what I know with everyone, and even if I'm able to help one person, that'd be amazing.
+Hello there! I've been a tech blog reader for a long time, but just recently I decided to start posting. I want to share what I know with everyone, and even if I'm able to help one person, that'd be amazing.
 
 I've decided to start writing bite-sized articles that will provide you a crash course on the concept. I thought that if I start with the easier languages and concepts and move to more advanced ones, beginners could follow along with me!
 
@@ -20,7 +20,7 @@ Let's start by clearing something up:
 
 All you're doing is telling a computer to do something, don't overthink it! You give it data and tell it what to do in what circumstances and it obediently does the work. That's all. It may be slightly different in different languages, but the concepts are the same. Alright, now that's off my chest, so here we go:
 
-### <a name="operators">Let's look at operators</a>
+### Let's look at operators
 
 The math things!
 
@@ -221,7 +221,7 @@ _`In case you were wondering, Borborygm is a much better word (imo) for "stomach
 
 Before you go, I have a few things to say:
 
-1. Thank you for reading this, it really makes my day! I really would love to hear your feedback, positive or negative, via comments, likes, a follow, Unicorns (what are those, they sound cool! 🦄), or even DMs!
+1. Thank you for reading this, it really makes my day! I really would love to hear your feedback, positive or negative!
 2. I'll be pushing more programming language tutorials like this one, but stepping up to more challenging languages. I'll also be adding onto current languages by making more advanced tutorials (Python Pt. 2?)
 3. Practice Practice Practice! Good programmers practice until they get it right, but _great_ programmers practice until they can't get it wrong! I'll list some practice resources below 😊
 4. This is just a _basic_ introduction to Python and programming. We aren't even scratching the surface, but if this made you have even an inkling of interest in programming, I highly recommend you go further into Python. I'll be adding more Python tutorials soon though 😁
