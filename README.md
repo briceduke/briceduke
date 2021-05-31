@@ -3,7 +3,7 @@
 
 - 🔭 I’m currently working on [PolyRant](https://github.com/polyrant/polyrant/)
 
-- 🌱 I’m currently learning **Typescript**
+- 🌱 I’m currently learning **Rust**
 
 - 👨‍💻 All of my projects are available at [https://github.com/briceduke/](https://github.com/briceduke/)
 
