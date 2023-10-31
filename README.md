@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Hi 👋, I'm Brice</h1>
+<!-- - 🔭 I’m currently working on [PolyRant](https://github.com/polyrant/polyrant/) -->
 
-## Getting Started
+-   🌱 I’m currently learning **Serverless**
 
-First, run the development server:
+-   👨‍💻 All of my projects are available at [https://github.com/briceduke/](https://github.com/briceduke/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   💬 Ask me about **NestJS**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   📫 How to reach me **bricewduke@gmail.com**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Blog posts
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<!-- BLOG-POST-LIST:START -->
 
-## Learn More
+-   [Javascript, ASAP 🌐](https://dev.to/briceduke/javascript-asap-27gh)
+-   [Python, ASAP 🐍](https://dev.to/briceduke/python-asap-2bea)
+<!-- BLOG-POST-LIST:END -->
 
-To learn more about Next.js, take a look at the following resources:
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://dev.to/briceduke" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dev-dot-to.svg" alt="briceduke" height="30" width="40" /></a>
+<a href="https://www.leetcode.com/briceduke" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/leetcode.svg" alt="briceduke" height="30" width="40" /></a>
+</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<p><img align="left" src="http://github-readme-stats.vercel.app/api/top-langs/?username=briceduke&show_icons=true&theme=nord&locale=en&layout=compact" alt="briceduke" /></p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p>&nbsp;<img align="center" src="http://github-readme-stats.vercel.app/api?username=briceduke&show_icons=true&theme=nord&locale=en" alt="briceduke" /></p>
