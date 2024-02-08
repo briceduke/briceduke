@@ -4,7 +4,7 @@ import './globals.css'
 import { cn } from '@/lib/utils';
 import { ThemeProvider } from '@/components/theme-provider';
 
-export const lusitana = Lusitana({
+const lusitana = Lusitana({
   weight: '400',
   variable: "--font-lusitana",
   subsets: ['latin']
