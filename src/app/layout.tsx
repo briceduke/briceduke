@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Brice Duke",
 		description: "Brice Duke's personal website and portfolio.",
-		images: ["https://briceduke.dev/BD.svg"],
+		images: ["https://briceduke.dev/Brice_Duke.svg"],
 	},
 	twitter: {
 		title: "Brice Duke",
-		images: ["https://briceduke.dev/BD.svg"],
+		images: ["https://briceduke.dev/Brice_Duke.svg"],
 		card: "summary_large_image",
 	},
 };
