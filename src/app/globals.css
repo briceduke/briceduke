@@ -71,12 +71,12 @@
 		@apply border-border;
 	}
 
-	*::selection {
+	::selection {
 		background: hsl(var(--primary));
 		color: hsl(var(--background));
 	}
 	  
-	*::-moz-selection {
+	::-moz-selection {
 		background: hsl(var(--primary));
 		color: hsl(var(--background));
 	}
