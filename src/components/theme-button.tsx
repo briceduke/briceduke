@@ -1,18 +1,25 @@
 "use client";
 
-import { useTheme } from "next-themes";
-import { Button } from "./ui/button";
 import { Moon, Sun } from "lucide-react";
-import * as React from "react"
+import { useTheme } from "next-themes";
+import * as React from "react";
+import { Button } from "./ui/button";
 
 export function ThemeButton() {
-    const { setTheme, theme } = useTheme();
+	const { setTheme, theme } = useTheme();
 
-    return <Button size={'icon'} variant={'ghost'} className="absolute right-8 top-8" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-        {theme === 'dark' ? (
-            <Sun className="h-4 w-4" />
-        ) : (
-            <Moon className="h-4 w-4" />
-        )}
-    </Button>
+	return (
+		<Button
+			variant={"outline"}
+			className="absolute right-8 top-8 gap-1"
+			onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+		>
+			<span>Theme:</span>
+			{theme === "dark" ? (
+				<p className="font-black">Dark</p>
+			) : (
+				<p className="font-black">Light</p>
+			)}
+		</Button>
+	);
 }
