@@ -1,6 +1,5 @@
 <h1 align="center">Hi 👋, I'm Brice</h1>
 <!-- - 🔭 I’m currently working on [PolyRant](https://github.com/polyrant/polyrant/) -->
-$$\ce{$\unicode[goombafont; color:red; pointer-events: none; z-index: -10; position: fixed; top: 0; left: 0; height: 100vh; object-fit: cover; background-size: cover; width: 130vw; opacity: 0.5; background: url('https://github.com/neverabsolute/neverabsolute/blob/main/cat-cat-suspicious.gif?raw=true');]{x0000}$}$$
 -   🌱 I’m currently learning **Serverless**
 
 -   👨‍💻 All of my projects are available at [https://github.com/briceduke/](https://github.com/briceduke/)
