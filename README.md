@@ -1,6 +1,6 @@
 <h1 align="center">Brice Duke</h1>
 
-<p>I am an engineer and student at The University of Texas at Dallas, studying Software Engineering and Information Assurance</p>
+<p>I am an engineer and student at The University of Texas at Dallas, studying Software Engineering and Cyber Defense</p>
 
 <p>I am interested in:</p>
 
