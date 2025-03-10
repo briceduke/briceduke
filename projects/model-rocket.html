@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../BD.svg" type="image/x-icon">
+    <title>Model Rocket - Brice Duke</title>
+    <meta name="description" content="Model Rocket - Thrust-vector controlled model rocket project">
+</head>
+<body>
+    <div class="technical-manual">
+        <div class="manual-header">
+            <div class="breadcrumb"><a href="/">HOME</a> / PROJECTS / MODEL ROCKET</div>
+            <h1 class="manual-title">MODEL ROCKET</h1>
+            <div class="subtitle">THRUST-VECTOR CONTROLLED MODEL ROCKET</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">PROJECT OVERVIEW</div>
+            <div class="section-content">
+                <div class="project-meta">
+                    <div class="meta-item"><span class="meta-label">TYPE:</span> Hardware Engineering</div>
+                    <div class="meta-item"><span class="meta-label">TECH:</span> Arduino, 3D Printing, Embedded Systems</div>
+                    <div class="meta-item"><span class="meta-label">STATUS:</span> In Development</div>
+                </div>
+                
+                <p class="project-text">
+                    This model rocket project focuses on implementing thrust vector control (TVC) technology 
+                    to achieve stable and controlled flight. Unlike traditional model rockets that rely on fins 
+                    for passive stabilization, this project uses active control of the rocket engine's direction 
+                    to maintain stability and enable more complex flight paths.
+                </p>
+                <p class="project-text">
+                    Thrust vector control is the same technology used in advanced rockets like the SpaceX Falcon 9 
+                    and NASA's Space Launch System. By implementing this technology at model scale, the project 
+                    provides valuable hands-on experience with aerospace engineering principles and control systems.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">TECHNICAL DETAILS</div>
+            <div class="section-content">
+                <p class="project-text">
+                    The rocket incorporates several technical systems working together to achieve controlled flight:
+                </p>
+                <ul class="tech-list">
+                    <li>Gimbal-mounted motor for two-axis thrust vectoring</li>
+                    <li>Arduino-based flight computer for real-time control</li>
+                    <li>IMU (Inertial Measurement Unit) with accelerometer and gyroscope</li>
+                    <li>Custom PID control algorithms for flight stabilization</li>
+                    <li>3D printed structural components for weight optimization</li>
+                    <li>Telemetry system for real-time data transmission</li>
+                    <li>Redundant deployment systems for recovery parachutes</li>
+                    <li>Custom PCB design for electronics integration</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">DESIGN CONSIDERATIONS</div>
+            <div class="section-content">
+                <p class="project-text">The rocket design balances several key factors:</p>
+                <ul class="tech-list">
+                    <li>Weight distribution for proper center of gravity</li>
+                    <li>Aerodynamic stability during powered and unpowered flight</li>
+                    <li>Structural integrity to withstand launch forces</li>
+                    <li>Electronics bay thermal management</li>
+                    <li>Modular construction for easy maintenance and modification</li>
+                    <li>Recovery system reliability and redundancy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">DEVELOPMENT PROCESS</div>
+            <div class="section-content">
+                <p class="project-text">
+                    The development of this model rocket follows an iterative engineering approach, starting with 
+                    design and simulation, followed by component testing, and culminating in full flight tests. 
+                    The process includes:
+                </p>
+                <ul class="tech-list">
+                    <li>CAD modeling of all mechanical components</li>
+                    <li>Computational fluid dynamics (CFD) simulations</li>
+                    <li>Static thrust testing of the engine and gimbal system</li>
+                    <li>Control algorithm development and tuning</li>
+                    <li>Electronics integration and testing</li>
+                    <li>Ground testing of all systems</li>
+                    <li>Flight testing with data collection and analysis</li>
+                    <li>Iterative improvements based on test results</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">PROJECT DOCUMENTATION</div>
+            <div class="section-content">
+                <p class="project-text">
+                    This project is currently under development, with detailed documentation and code to be published 
+                    upon completion of initial flight tests.
+                </p>
+            </div>
+        </div>
+
+        <div class="manual-footer">
+            <div class="navigation">
+                <a href="/" class="nav-link">← BACK TO HOME</a>
+                <a href="/projects/infogo.html" class="nav-link">NEXT: INFOGO →</a>
+            </div>
+            <div id="revision" class="footer-doc-id">MODEL ROCKET / REV. 2024</div>
+        </div>
+    </div>
+
+    <script>
+        // Fetch the latest commit from GitHub API
+        fetch('https://api.github.com/repos/briceduke/briceduke/commits')
+            .then(response => response.json())
+            .then(data => {
+                if (data && data.length > 0) {
+                    const latestCommit = data[0];
+                    const commitSha = latestCommit.sha.substring(0, 7);
+                    const commitUrl = latestCommit.html_url;
+                    
+                    // Update the revision text with the commit hash and link
+                    document.getElementById('revision').innerHTML = `MODEL ROCKET / <a href="${commitUrl}" target="_blank">REV. ${commitSha}</a>`;
+                }
+            })
+            .catch(error => console.error('Error fetching commit data:', error));
+    </script>
+</body>
+<style>
+    /* F-4 Phantom Technical Manual Style */
+    /* Base Styles */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        line-height: 1.4;
+        background-color: #f8f7f2;
+        color: #000;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .technical-manual {
+        max-width: 800px;
+        margin: 20px;
+        padding: 20px;
+        background-color: #f8f7f2;
+    }
+
+    /* Manual Header */
+    .manual-header {
+        text-align: center;
+        margin-bottom: 20px;
+        position: relative;
+        border-bottom: 1px solid #000;
+        padding-bottom: 10px;
+    }
+
+    .breadcrumb {
+        font-size: 12px;
+        margin-bottom: 10px;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-top: 5px;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .manual-title {
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin: 10px 0 5px;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    /* Sections */
+    .section {
+        margin-bottom: 30px;
+    }
+
+    .section-header {
+        background-color: #000;
+        color: #fff;
+        padding: 5px 10px;
+        font-weight: bold;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .section-content {
+        padding: 10px 5px;
+    }
+
+    /* Project Meta */
+    .project-meta {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+
+    .meta-item {
+        margin-bottom: 5px;
+    }
+
+    .meta-label {
+        font-weight: bold;
+        font-family: Helvetica, Arial, sans-serif;
+        margin-right: 10px;
+    }
+
+    /* Project Text */
+    .project-text {
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+
+    /* Lists */
+    .tech-list {
+        margin: 0 0 20px 25px;
+    }
+
+    .tech-list li {
+        margin-bottom: 8px;
+    }
+
+    /* Project Links */
+    .link-container {
+        display: flex;
+        gap: 15px;
+    }
+
+    .project-link {
+        display: inline-block;
+        padding: 5px 10px;
+        border: 1px solid #000;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        font-family: Helvetica, Arial, sans-serif;
+        transition: background-color 0.2s;
+    }
+
+    .project-link:hover {
+        background-color: #e5e5e5;
+    }
+
+    /* Footer */
+    .manual-footer {
+        margin-top: 30px;
+        padding-top: 10px;
+        border-top: 1px solid #000;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .footer-doc-id {
+        font-size: 12px;
+        text-align: right;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .nav-link:hover {
+        text-decoration: underline;
+    }
+
+    /* Links */
+    a {
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Selection styling */
+    ::selection {
+        background: #000;
+        color: #fff;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+        .technical-manual {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .navigation {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+</style>
+</html> 

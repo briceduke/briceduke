@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../BD.svg" type="image/x-icon">
+    <title>outfits.bio - Brice Duke</title>
+    <meta name="description" content="outfits.bio - A platform to keep track of your clothing and find outfit inspiration">
+</head>
+<body>
+    <div class="technical-manual">
+        <div class="manual-header">
+            <div class="breadcrumb"><a href="/">HOME</a> / PROJECTS / OUTFITS.BIO</div>
+            <h1 class="manual-title">OUTFITS.BIO</h1>
+            <div class="subtitle">TRACK YOUR CLOTHING AND FIND OUTFIT INSPIRATION</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">PROJECT OVERVIEW</div>
+            <div class="section-content">
+                <div class="project-meta">
+                    <div class="meta-item"><span class="meta-label">TYPE:</span> Lifestyle Web Application</div>
+                    <div class="meta-item"><span class="meta-label">TECH:</span> Next.js, Tailwind CSS, Prisma</div>
+                    <div class="meta-item"><span class="meta-label">STATUS:</span> Completed</div>
+                </div>
+                
+                <p class="project-text">
+                    outfits.bio is a modern web application designed to help fashion-conscious individuals 
+                    keep track of their clothing items and discover new outfit combinations. The platform 
+                    allows users to catalog their wardrobe digitally and receive personalized outfit 
+                    suggestions based on their existing collection.
+                </p>
+                <p class="project-text">
+                    By digitizing your wardrobe, outfits.bio helps solve the common problem of "having nothing to wear" 
+                    despite a full closet. The application provides an intuitive interface for organizing clothing 
+                    items by category, season, color, and style, making it easier to create cohesive outfits and 
+                    plan your daily looks.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">TECHNICAL DETAILS</div>
+            <div class="section-content">
+                <p class="project-text">
+                    outfits.bio leverages a modern web development stack to provide a seamless user experience:
+                </p>
+                <ul class="tech-list">
+                    <li>Next.js 13+ for server-side rendering and API routes</li>
+                    <li>Tailwind CSS for responsive and customizable styling</li>
+                    <li>Prisma as the ORM for type-safe database access</li>
+                    <li>NextAuth.js for secure authentication</li>
+                    <li>PostgreSQL database for reliable data storage</li>
+                    <li>Vercel for seamless deployment and hosting</li>
+                    <li>Cloudinary for image storage and optimization</li>
+                    <li>React Query for efficient data fetching and state management</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">KEY FEATURES</div>
+            <div class="section-content">
+                <p class="project-text">The application offers a range of features to enhance the user's wardrobe management:</p>
+                <ul class="tech-list">
+                    <li>Digital wardrobe catalog with detailed item information</li>
+                    <li>Custom outfit creation and saving</li>
+                    <li>Outfit inspiration based on user preferences and current inventory</li>
+                    <li>Seasonal wardrobe planning tools</li>
+                    <li>Social sharing of outfits and collections</li>
+                    <li>Usage statistics to identify most/least worn items</li>
+                    <li>Shopping recommendations for complementary pieces</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">DEVELOPMENT PROCESS</div>
+            <div class="section-content">
+                <p class="project-text">
+                    The development of outfits.bio follows a user-centered design approach, with continuous 
+                    feedback incorporated throughout the development cycle. The project employs modern development 
+                    practices including:
+                </p>
+                <ul class="tech-list">
+                    <li>Component-based architecture for reusable UI elements</li>
+                    <li>Mobile-first design approach for optimal cross-device experiences</li>
+                    <li>Continuous integration and deployment pipeline</li>
+                    <li>Feature flagging for controlled feature rollouts</li>
+                    <li>Performance optimization for image-heavy application</li>
+                    <li>Accessibility considerations throughout the interface</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">PROJECT LINKS</div>
+            <div class="section-content">
+                <div class="link-container">
+                    <a href="https://github.com/briceduke/app" target="_blank" class="project-link">GITHUB REPOSITORY</a>
+                    <a href="https://outfits.bio" target="_blank" class="project-link">LIVE WEBSITE</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="manual-footer">
+            <div class="navigation">
+                <a href="/" class="nav-link">← BACK TO HOME</a>
+                <a href="/projects/wavpoint.html" class="nav-link">NEXT: WAVPOINT →</a>
+            </div>
+            <div id="revision" class="footer-doc-id">OUTFITS.BIO / REV. 2024</div>
+        </div>
+    </div>
+
+    <script>
+        // Fetch the latest commit from GitHub API
+        fetch('https://api.github.com/repos/briceduke/briceduke/commits')
+            .then(response => response.json())
+            .then(data => {
+                if (data && data.length > 0) {
+                    const latestCommit = data[0];
+                    const commitSha = latestCommit.sha.substring(0, 7);
+                    const commitUrl = latestCommit.html_url;
+                    
+                    // Update the revision text with the commit hash and link
+                    document.getElementById('revision').innerHTML = `OUTFITS.BIO / <a href="${commitUrl}" target="_blank">REV. ${commitSha}</a>`;
+                }
+            })
+            .catch(error => console.error('Error fetching commit data:', error));
+    </script>
+</body>
+<style>
+    /* F-4 Phantom Technical Manual Style */
+    /* Base Styles */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        line-height: 1.4;
+        background-color: #f8f7f2;
+        color: #000;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .technical-manual {
+        max-width: 800px;
+        margin: 20px;
+        padding: 20px;
+        background-color: #f8f7f2;
+    }
+
+    /* Manual Header */
+    .manual-header {
+        text-align: center;
+        margin-bottom: 20px;
+        position: relative;
+        border-bottom: 1px solid #000;
+        padding-bottom: 10px;
+    }
+
+    .breadcrumb {
+        font-size: 12px;
+        margin-bottom: 10px;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-top: 5px;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .manual-title {
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin: 10px 0 5px;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    /* Sections */
+    .section {
+        margin-bottom: 30px;
+    }
+
+    .section-header {
+        background-color: #000;
+        color: #fff;
+        padding: 5px 10px;
+        font-weight: bold;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .section-content {
+        padding: 10px 5px;
+    }
+
+    /* Project Meta */
+    .project-meta {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+
+    .meta-item {
+        margin-bottom: 5px;
+    }
+
+    .meta-label {
+        font-weight: bold;
+        font-family: Helvetica, Arial, sans-serif;
+        margin-right: 10px;
+    }
+
+    /* Project Text */
+    .project-text {
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+
+    /* Lists */
+    .tech-list {
+        margin: 0 0 20px 25px;
+    }
+
+    .tech-list li {
+        margin-bottom: 8px;
+    }
+
+    /* Project Links */
+    .link-container {
+        display: flex;
+        gap: 15px;
+    }
+
+    .project-link {
+        display: inline-block;
+        padding: 5px 10px;
+        border: 1px solid #000;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        font-family: Helvetica, Arial, sans-serif;
+        transition: background-color 0.2s;
+    }
+
+    .project-link:hover {
+        background-color: #e5e5e5;
+    }
+
+    /* Footer */
+    .manual-footer {
+        margin-top: 30px;
+        padding-top: 10px;
+        border-top: 1px solid #000;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .footer-doc-id {
+        font-size: 12px;
+        text-align: right;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .nav-link:hover {
+        text-decoration: underline;
+    }
+
+    /* Links */
+    a {
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Selection styling */
+    ::selection {
+        background: #000;
+        color: #fff;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+        .technical-manual {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .navigation {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+</style>
+</html> 
