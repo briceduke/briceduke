@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Model Rocket - Brice Duke</title>
     <meta name="description" content="Model Rocket - Thrust-vector controlled model rocket project">
 </head>
+
 <body>
     <div class="technical-manual">
         <div class="manual-header">
@@ -20,20 +22,23 @@
             <div class="section-content">
                 <div class="project-meta">
                     <div class="meta-item"><span class="meta-label">TYPE:</span> Hardware Engineering</div>
-                    <div class="meta-item"><span class="meta-label">TECH:</span> Arduino, 3D Printing, Embedded Systems</div>
+                    <div class="meta-item"><span class="meta-label">TECH:</span> Arduino, 3D Printing, Embedded Systems
+                    </div>
                     <div class="meta-item"><span class="meta-label">STATUS:</span> In Development</div>
                 </div>
-                
+
                 <p class="project-text">
-                    This model rocket project focuses on implementing thrust vector control (TVC) technology 
-                    to achieve stable and controlled flight. Unlike traditional model rockets that rely on fins 
-                    for passive stabilization, this project uses active control of the rocket engine's direction 
+                    This model rocket project focuses on implementing thrust vector control (TVC) technology
+                    to achieve stable and controlled flight. Unlike traditional model rockets that rely on fins
+                    for passive stabilization, this project uses active control of the rocket engine's direction
                     to maintain stability and enable more complex flight paths.
                 </p>
                 <p class="project-text">
-                    Thrust vector control is the same technology used in advanced rockets like the SpaceX Falcon 9 
-                    and NASA's Space Launch System. By implementing this technology at model scale, the project 
-                    provides valuable hands-on experience with aerospace engineering principles and control systems.
+                    I&apos;ve learned a lot about multiple disciplines of engineering while working on this project,
+                    like
+                    mechanical, electrical, and embedded software engineering. I&apos;ve also learned a lot about the
+                    importance of
+                    design and simulation in the engineering process.
                 </p>
             </div>
         </div>
@@ -46,7 +51,7 @@
                 </p>
                 <ul class="tech-list">
                     <li>Gimbal-mounted motor for two-axis thrust vectoring</li>
-                    <li>Arduino-based flight computer for real-time control</li>
+                    <li>Flight computer for real-time control</li>
                     <li>IMU (Inertial Measurement Unit) with accelerometer and gyroscope</li>
                     <li>Custom PID control algorithms for flight stabilization</li>
                     <li>3D printed structural components for weight optimization</li>
@@ -76,15 +81,15 @@
             <div class="section-header">DEVELOPMENT PROCESS</div>
             <div class="section-content">
                 <p class="project-text">
-                    The development of this model rocket follows an iterative engineering approach, starting with 
-                    design and simulation, followed by component testing, and culminating in full flight tests. 
+                    The development of this model rocket follows an iterative engineering approach, starting with
+                    design and simulation, followed by component testing, and culminating in full flight tests.
                     The process includes:
                 </p>
                 <ul class="tech-list">
                     <li>CAD modeling of all mechanical components</li>
-                    <li>Computational fluid dynamics (CFD) simulations</li>
                     <li>Static thrust testing of the engine and gimbal system</li>
                     <li>Control algorithm development and tuning</li>
+                    <li>Flight software simulations</li>
                     <li>Electronics integration and testing</li>
                     <li>Ground testing of all systems</li>
                     <li>Flight testing with data collection and analysis</li>
@@ -92,12 +97,12 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="section">
             <div class="section-header">PROJECT DOCUMENTATION</div>
             <div class="section-content">
                 <p class="project-text">
-                    This project is currently under development, with detailed documentation and code to be published 
+                    This project is currently under development, with detailed documentation and code to be published
                     upon completion of initial flight tests.
                 </p>
             </div>
@@ -108,7 +113,7 @@
                 <a href="/" class="nav-link">← BACK TO HOME</a>
                 <a href="/projects/infogo.html" class="nav-link">NEXT: INFOGO →</a>
             </div>
-            <div id="revision" class="footer-doc-id">MODEL ROCKET / REV. 2024</div>
+            <div id="revision" class="footer-doc-id">MODEL ROCKET / REV. 2025</div>
         </div>
     </div>
 
@@ -121,7 +126,7 @@
                     const latestCommit = data[0];
                     const commitSha = latestCommit.sha.substring(0, 7);
                     const commitUrl = latestCommit.html_url;
-                    
+
                     // Update the revision text with the commit hash and link
                     document.getElementById('revision').innerHTML = `MODEL ROCKET / <a href="${commitUrl}" target="_blank">REV. ${commitSha}</a>`;
                 }
@@ -320,4 +325,5 @@
         }
     }
 </style>
-</html> 
+
+</html>

@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../BD.svg" type="image/x-icon">
     <title>InfoGo - Brice Duke</title>
-    <meta name="description" content="InfoGo - A RAG-based intelligent smart knowledge assistant for the financial services industry">
+    <meta name="description"
+        content="InfoGo - A RAG-based intelligent smart knowledge assistant for the financial services industry">
 </head>
+
 <body>
     <div class="technical-manual">
         <div class="manual-header">
@@ -20,21 +23,25 @@
             <div class="section-content">
                 <div class="project-meta">
                     <div class="meta-item"><span class="meta-label">TYPE:</span> Financial AI Tool</div>
-                    <div class="meta-item"><span class="meta-label">TECH:</span> TypeScript, Python, C#, MongoDB, AWS</div>
+                    <div class="meta-item"><span class="meta-label">TECH:</span> TypeScript, Python, C#, MongoDB, AWS
+                    </div>
                     <div class="meta-item"><span class="meta-label">STATUS:</span> HackUTD 2024 Project</div>
                 </div>
-                
+
                 <p class="project-text">
-                    InfoGo is a Retrieval Augmented Generation (RAG)-based application designed to enhance 
-                    stock analysis by leveraging information from multiple online sources. The system gathers data from 
-                    a diverse set of websites, including financial news, market analysis platforms, and expert blogs, 
+                    InfoGo is a Retrieval Augmented Generation (RAG)-based application designed to enhance
+                    stock analysis by leveraging information from multiple online sources. The system gathers data from
+                    a diverse set of websites, including financial news, market analysis platforms, and expert blogs,
                     to compile a comprehensive view of a company's stock status.
                 </p>
                 <p class="project-text">
-                    This intelligent assistant leverages RAG technology to intelligently retrieve relevant data, 
-                    analyze it, and generate informed insights, helping investors make better decisions. By integrating 
-                    information from multiple sources, the analysis is not limited to a single perspective, increasing 
-                    the accuracy and reliability of stock predictions.
+                    This intelligent assistant leverages RAG technology to intelligently retrieve relevant data,
+                    analyze it, and generate informed insights, helping investors make better decisions. It is designed
+                    to
+                    discount or add to the calculated NCAV (Net Current Asset Value) of a company based on hard data,
+                    with other less tangible factors like the company's management, market position, and future
+                    prospects
+                    being shown as a warning to the user but not as a definitive metric.
                 </p>
             </div>
         </div>
@@ -43,7 +50,7 @@
             <div class="section-header">TECHNICAL DETAILS</div>
             <div class="section-content">
                 <p class="project-text">
-                    InfoGo is built with a modern tech stack that combines multiple programming languages 
+                    InfoGo is built with a modern tech stack that combines multiple programming languages
                     and technologies to deliver a comprehensive financial analysis tool:
                 </p>
                 <ul class="tech-list">
@@ -62,8 +69,10 @@
             <div class="section-header">DEVELOPMENT PROCESS</div>
             <div class="section-content">
                 <p class="project-text">
-                    InfoGo was developed as a collaborative project for HackUTD 2024, sponsored by Infosys. As part of the 
-                    development team alongside Sujin and Yousuf, I contributed to the application architecture and implementation.
+                    InfoGo was developed as a collaborative project for HackUTD 2024, sponsored by Infosys. As part of
+                    the
+                    development team alongside my friends Sujin and Yousuf, I contributed to the application
+                    architecture and implementation.
                 </p>
                 <p class="project-text">
                     The development process involved:
@@ -77,12 +86,13 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="section">
             <div class="section-header">PROJECT LINKS</div>
             <div class="section-content">
                 <div class="link-container">
-                    <a href="https://github.com/su-bonbon/HackUTD2024" target="_blank" class="project-link">GITHUB REPOSITORY</a>
+                    <a href="https://github.com/su-bonbon/HackUTD2024" target="_blank" class="project-link">GITHUB
+                        REPOSITORY</a>
                     <a href="https://devpost.com/software/fill" target="_blank" class="project-link">DEVPOST</a>
                 </div>
             </div>
@@ -93,7 +103,7 @@
                 <a href="/" class="nav-link">← BACK TO HOME</a>
                 <a href="/projects/outfits-bio.html" class="nav-link">NEXT: OUTFITS.BIO →</a>
             </div>
-            <div id="revision" class="footer-doc-id">INFOGO / REV. 2024</div>
+            <div id="revision" class="footer-doc-id">INFOGO / REV. 2025</div>
         </div>
     </div>
 
@@ -106,7 +116,7 @@
                     const latestCommit = data[0];
                     const commitSha = latestCommit.sha.substring(0, 7);
                     const commitUrl = latestCommit.html_url;
-                    
+
                     // Update the revision text with the commit hash and link
                     document.getElementById('revision').innerHTML = `INFOGO / <a href="${commitUrl}" target="_blank">REV. ${commitSha}</a>`;
                 }
@@ -305,4 +315,5 @@
         }
     }
 </style>
-</html> 
+
+</html>

@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../BD.svg" type="image/x-icon">
     <title>outfits.bio - Brice Duke</title>
-    <meta name="description" content="outfits.bio - A platform to keep track of your clothing and find outfit inspiration">
+    <meta name="description"
+        content="outfits.bio - A platform to keep track of your clothing and find outfit inspiration">
 </head>
+
 <body>
     <div class="technical-manual">
         <div class="manual-header">
@@ -23,18 +26,17 @@
                     <div class="meta-item"><span class="meta-label">TECH:</span> Next.js, Tailwind CSS, Prisma</div>
                     <div class="meta-item"><span class="meta-label">STATUS:</span> Completed</div>
                 </div>
-                
+
                 <p class="project-text">
-                    outfits.bio is a modern web application designed to help fashion-conscious individuals 
-                    keep track of their clothing items and discover new outfit combinations. The platform 
-                    allows users to catalog their wardrobe digitally and receive personalized outfit 
-                    suggestions based on their existing collection.
+                    outfits.bio is a modern web application designed to help fashion-conscious individuals
+                    keep track of their clothing items and discover new outfit combinations. The platform
+                    allows users to catalog their wardrobe digitally and find inspiration for their outfits.
                 </p>
                 <p class="project-text">
-                    By digitizing your wardrobe, outfits.bio helps solve the common problem of "having nothing to wear" 
-                    despite a full closet. The application provides an intuitive interface for organizing clothing 
-                    items by category, season, color, and style, making it easier to create cohesive outfits and 
-                    plan your daily looks.
+                    The application provides an intuitive interface for organizing clothing
+                    items by category, season, color, and style, making it easier to create cohesive outfits and
+                    plan your daily looks. It also allows users to share their outfits with friends and family,
+                    and to get recommendations for new items to add to their wardrobe.
                 </p>
             </div>
         </div>
@@ -61,15 +63,13 @@
         <div class="section">
             <div class="section-header">KEY FEATURES</div>
             <div class="section-content">
-                <p class="project-text">The application offers a range of features to enhance the user's wardrobe management:</p>
+                <p class="project-text">The application offers a range of features to enhance the user's wardrobe
+                    management:</p>
                 <ul class="tech-list">
                     <li>Digital wardrobe catalog with detailed item information</li>
                     <li>Custom outfit creation and saving</li>
                     <li>Outfit inspiration based on user preferences and current inventory</li>
-                    <li>Seasonal wardrobe planning tools</li>
                     <li>Social sharing of outfits and collections</li>
-                    <li>Usage statistics to identify most/least worn items</li>
-                    <li>Shopping recommendations for complementary pieces</li>
                 </ul>
             </div>
         </div>
@@ -78,8 +78,8 @@
             <div class="section-header">DEVELOPMENT PROCESS</div>
             <div class="section-content">
                 <p class="project-text">
-                    The development of outfits.bio follows a user-centered design approach, with continuous 
-                    feedback incorporated throughout the development cycle. The project employs modern development 
+                    The development of outfits.bio follows a user-centered design approach, with continuous
+                    feedback incorporated throughout the development cycle. The project employs modern development
                     practices including:
                 </p>
                 <ul class="tech-list">
@@ -92,12 +92,13 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="section">
             <div class="section-header">PROJECT LINKS</div>
             <div class="section-content">
                 <div class="link-container">
-                    <a href="https://github.com/briceduke/app" target="_blank" class="project-link">GITHUB REPOSITORY</a>
+                    <a href="https://github.com/briceduke/app" target="_blank" class="project-link">GITHUB
+                        REPOSITORY</a>
                     <a href="https://outfits.bio" target="_blank" class="project-link">LIVE WEBSITE</a>
                 </div>
             </div>
@@ -108,7 +109,7 @@
                 <a href="/" class="nav-link">← BACK TO HOME</a>
                 <a href="/projects/wavpoint.html" class="nav-link">NEXT: WAVPOINT →</a>
             </div>
-            <div id="revision" class="footer-doc-id">OUTFITS.BIO / REV. 2024</div>
+            <div id="revision" class="footer-doc-id">OUTFITS.BIO / REV. 2025</div>
         </div>
     </div>
 
@@ -121,7 +122,7 @@
                     const latestCommit = data[0];
                     const commitSha = latestCommit.sha.substring(0, 7);
                     const commitUrl = latestCommit.html_url;
-                    
+
                     // Update the revision text with the commit hash and link
                     document.getElementById('revision').innerHTML = `OUTFITS.BIO / <a href="${commitUrl}" target="_blank">REV. ${commitSha}</a>`;
                 }
@@ -320,4 +321,5 @@
         }
     }
 </style>
-</html> 
+
+</html>
