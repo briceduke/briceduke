@@ -1,0 +1,45 @@
+<nav id="main-nav">
+    {{ $currentPage := . }}
+    {{ range $index, $element := .Site.Menus.about.Reverse }}
+    <a href="{{ .URL }}" class="{{ if or ($currentPage.IsMenuCurrent "about" .) }}active{{ end }}"
+        data-title="{{ .Name }}">
+        <p>- {{ .Name }}</p>
+    </a>
+    {{ end }}
+    {{ range $index, $element := .Site.Menus.main.ByWeight }}
+    <a href="{{ .URL }}" class="{{ if or ($currentPage.IsMenuCurrent "main" .) (and (eq $index 0) (eq
+        $currentPage.RelPermalink "/" )) }}active{{ end }}" data-title="{{ .Name }}">
+        <p>- {{ .Name }}</p>
+        {{- if .Page.Date }}
+        <p class="sidebar-subtitle"><span style="opacity: 0;">- </span>{{ .Page.Date | time.Format ":date_short" }}</p>
+        {{ end -}}
+    </a>
+    {{ end }}
+    <a href="/resume.pdf" data-title="Resume">
+        <p>- Résumé</p>
+    </a>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const nav = document.getElementById('main-nav');
+        const links = nav.getElementsByTagName('a');
+        const isMobile = window.innerWidth < 768;
+
+        if (isMobile && !document.body.classList.contains('home')) {
+            const activePage = document.querySelector('.active');
+            if (activePage) {
+                Array.from(links).forEach(link => {
+                    if (link !== activePage) {
+                        link.style.display = 'none';
+                    }
+                });
+
+                activePage.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.location.href = '/';
+                });
+            }
+        }
+    });
+</script>

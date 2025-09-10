@@ -11,4 +11,4 @@
   <li>Embedded software</li>
 </ul>
 
-<p>I'd love to connect with other professionals and continue to learn and grow, so feel free to reach out to me at bricewduke@gmail.com</p>
+<p>If you wish to contact me, please do so by sending me an email ([bricewduke@gmail.com](mailto:bricewduke@gmail.com)) or by message on x.com ([@bricewduke](https://x.com/bricewduke))</p>

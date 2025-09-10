@@ -1,0 +1,17 @@
+baseURL = 'http://briceduke.dev/'
+languageCode = 'en-us'
+title = 'Brice Duke'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # Allow raw HTML in Markdown (for summaries that contain inline HTML)
+      unsafe = true
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+      # Automatically convert plain URLs/emails into links
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+    [markup.goldmark.extensions]
+      linkify = true

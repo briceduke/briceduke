@@ -1,0 +1,9 @@
+<article class="fade-in">
+    <div class="summary" style="border: none; padding-top: 0;">
+        {{ with .Page.Params.bio }}
+        {{ . | markdownify }}
+        {{ else }}
+        {{ .Content | markdownify }}
+        {{ end }}
+    </div>
+</article>

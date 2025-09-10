@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="home-container">
+    {{- partial "sidebar.html" . -}}
+    <div class="main-content">
+        {{ range first 1 .Site.Menus.main.ByWeight }}
+        {{- partial "content.html" .Page -}}
+        {{ end }}
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,14 @@
+{{ define "main" }}
+    <div class="single-container">
+        {{- partial "sidebar.html" . -}}
+        <div class="main-content">
+            {{ if eq .Layout "imprint" }}
+                {{- partial "imprint.html" . -}}
+            {{ else if eq .Layout "information" }}
+                {{- partial "information.html" . -}}
+            {{ else }}
+                {{- partial "content.html" . -}}
+            {{ end }}
+        </div>
+    </div>
+{{ end }}

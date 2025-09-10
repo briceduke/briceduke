@@ -1,0 +1,14 @@
+{{ $imgs := findRE "(?i)<(img|figure)\\b" .Content }} {{ $hasImages :=gt (len $imgs) 0 }} {{ if $hasImages }} <div
+    class="images fade-in">
+    {{ .Content }}
+    </div>
+    {{ end }}
+    <article class="fade-in main-content-article{{ if not $hasImages }} no-images{{ end }}">
+        <div class="summary">
+            {{ with .Params.summary }}
+            {{ . | markdownify }}
+            {{ else }}
+            {{ .Summary }}
+            {{ end }}
+        </div>
+    </article>

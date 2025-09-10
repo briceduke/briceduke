@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+{{- partial "head.html" . -}}
+
+<body class="{{ if .IsHome }}home{{ end }}">
+    <div id="content">
+        {{- block "main" . }}{{- end }}
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close"></span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const isMobile = window.innerWidth < 768;
+
+            // Redirect desktop home to Information page
+            if (document.body.classList.contains('home') && !isMobile) {
+                var infoUrl = '{{ "information" | relURL }}';
+                window.location.replace(infoUrl);
+                return;
+            }
+
+            var modal = document.getElementById('imageModal');
+            var modalImg = document.getElementById('modalImage');
+            var closeBtn = document.getElementsByClassName('close')[0];
+
+            document.querySelectorAll('.images img').forEach(function (img) {
+                if (!isMobile) {
+                    img.onclick = function () {
+                        modal.classList.add('show');
+                        modalImg.src = this.src;
+                    }
+                }
+            });
+
+            function closeModal() {
+                modal.classList.remove('show');
+            }
+
+            closeBtn.onclick = closeModal;
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    closeModal();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
