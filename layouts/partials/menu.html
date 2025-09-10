@@ -7,8 +7,7 @@
     </a>
     {{ end }}
     {{ range $index, $element := .Site.Menus.main.ByWeight }}
-    <a href="{{ .URL }}" class="{{ if or ($currentPage.IsMenuCurrent "main" .) (and (eq $index 0) (eq
-        $currentPage.RelPermalink "/" )) }}active{{ end }}" data-title="{{ .Name }}">
+    <a href="{{ .URL }}" class="{{ if or ($currentPage.IsMenuCurrent "main" .) (and (eq $index 0) (eq $currentPage.RelPermalink "/" )) }}active{{ end }}" data-title="{{ .Name }}">
         <p>- {{ .Name }}</p>
         {{- if .Page.Date }}
         <p class="sidebar-subtitle"><span style="opacity: 0;">- </span>{{ .Page.Date | time.Format ":date_short" }}</p>
