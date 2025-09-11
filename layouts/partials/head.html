@@ -3,7 +3,7 @@
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="dark">
-    <meta name="theme-color" content="{{ .Params.backgroundColor | default "#101010" }}">
+    <meta name="theme-color" content="{{ .Params.backgroundColor | default " #101010" }}">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     {{ $title := print .Site.Title " - " .Title }}
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
@@ -439,18 +439,47 @@
         /* iOS Safari overrides */
         html,
         body {
-            background-color: {{ .Params.backgroundColor | default "#101010" }};
+            background-color: {
+                    {
+                    .Params.backgroundColor | default "#101010"
+                }
+            }
+
+            ;
         }
 
         body {
             padding: 44px 44px 0px;
             color: #FFFFFF;
-            min-height: 100vh;
         }
-        a, a:visited { color: inherit; }
-        .summary a { color: {{ .Params.accentColor | default "#FFFFFF" }}; }
+
+        a,
+        a:visited {
+            color: inherit;
+        }
+
+        .summary a {
+            color: {
+                    {
+                    .Params.accentColor | default "#FFFFFF"
+                }
+            }
+
+            ;
+        }
+
         @supports (-webkit-touch-callout: none) {
-            html, body { background-color: {{ .Params.backgroundColor | default "#101010" }}; }
+
+            html,
+            body {
+                background-color: {
+                        {
+                        .Params.backgroundColor | default "#101010"
+                    }
+                }
+
+                ;
+            }
         }
     </style>
 </head>
