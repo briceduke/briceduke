@@ -1,6 +1,6 @@
 <nav id="main-nav">
     {{ $currentPage := . }}
-    {{ range $index, $element := .Site.Menus.about.Reverse }}
+    {{ range $index, $element := .Site.Menus.about.ByWeight }}
     <a href="{{ .URL }}" class="{{ if or ($currentPage.IsMenuCurrent "about" .) (and (eq $index 0) (eq
         $currentPage.RelPermalink "/" )) }}active{{ end }}" data-title="{{ .Name }}">
         <p>- {{ .Name }}</p>
