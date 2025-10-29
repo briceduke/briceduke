@@ -6,4 +6,5 @@ summary: "This is an early‑stage design study for an actively stabilized, thru
 backgroundColor: "#101010"
 accentColor: "#FFFFFF"
 ---
-{{< figure src="gimbal.png" title="Gimbal CAD" caption="500 x 500 mm" width="2547" >}}
+{{< figure src="gimbal.png" title="Gimbal CAD" width="2547" >}}
+{{< figure src="e-bay.png" title="Electronics Bay CAD" width="2547" >}}
