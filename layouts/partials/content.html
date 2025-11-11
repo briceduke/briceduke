@@ -4,11 +4,13 @@
     </div>
     {{ end }}
     <article class="fade-in main-content-article{{ if not $hasImages }} no-images{{ end }}">
-        <div class="summary">
-            {{ with .Params.summary }}
-            {{ . | markdownify }}
-            {{ else }}
-            {{ .Summary }}
-            {{ end }}
+        <div class="summary-wrapper">
+            <div class="summary">
+                {{ with .Params.summary }}
+                {{ . | markdownify }}
+                {{ else }}
+                {{ .Summary }}
+                {{ end }}
+            </div>
         </div>
     </article>
