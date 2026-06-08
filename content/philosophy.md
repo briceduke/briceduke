@@ -3,23 +3,23 @@ title: "Philosophy"
 menu: "about" # don't change
 layout: "information" # don't change
 
-bio: "I became an engineer to build things that make people safer, more prosperous, and more free.  I am drawn to problems that matter in the real world, where software and systems raise capacity, cut risk, and shorten the distance between intent and outcome.  My work and ambitions center on five pillars of American strength: manufacturing, defense, finance, law, and space.
+bio: "I became an engineer to build things that make people safer, more prosperous, and more free.  Right now my work sits where manufacturing and finance meet, two of the things that drive me most.
 <br><br>
-**Manufacturing** is national capability.  It’s the only way to turn ideas into machines, parts, and infrastructure.  When we can design and build at home, we control timelines, supply chains, and in effect, our destiny.  A strong manufacturing base underwrites everything else.
+The conviction under all of it goes back to reading, as a kid, about how the United States out-built its enemies in the 1940s.  Plants that made cars in peacetime were turning out aircraft and tanks within months, and the war was decided as much on those lines as on any front.  The ability to design and build at scale is what turns intent into outcome.  A society that can do it at home keeps control of its timelines, its supply chains, and in the end its own future.  Manufacturing is the floor everything else stands on.
 <br><br>
-**Defense** preserves peace and protects lives.  A credible and reliable war machine lets people live freely, work creatively, and argue openly, and the surest path to one is readiness, fieldable technology, and principled conduct.
+Defense is what keeps the people doing that work free to do it.  A credible, reliable ability to protect itself is what lets a country argue openly, work creatively, and live without fear, and the honest way to it is readiness, technology that holds up in the field, and principled conduct.
 <br><br>
-**Finance** is how we turn savings into progress.  By allocating capital, pricing risk, and widening participation, a healthy financial ecosystem powers new companies, new jobs, and the American Dream.  Building transparent and trustworthy infrastructure for this ecosystem is imperative.
+Finance is how a society turns stored effort into new capacity.  Moving resources to where they do the most good, pricing risk, and widening who gets to take part is what funds the next company, the next plant, the next idea, so I care about building infrastructure for it that's transparent and worth trusting.
 <br><br>
-The rule of **Law** is the operating system for a free society.  Separation of powers, judicial independence, and jury trials put the law, not a ruler, above everyone.  Technology should lower cost and complexity while strengthening due process.
+Law is what keeps power answerable so the rest can run.  Separation of powers, independent courts, and trial by jury put the rules above any single person.  Technology should make due process cheaper and clearer without watering it down.
 <br><br>
-**Space** expands what’s possible on Earth and safeguards humanity.  It sharpens engineering and science, extends communication, and opens a vast expanse of new resources. It strengthens the other four pillars by adding reach, resilience, and perspective.
+Space extends all of it outward.  It pushes engineering and science to their limits, stretches what we can reach and sense, and opens resources on a scale that changes the math on scarcity.  It feeds back into the other four by adding reach, redundancy, and perspective.
 <br><br>
-I like being close to users and hardware, and value hands-on work, plain language, and accountability (if I help build it, I help operate it).  When it comes to technical matters, security, performance, and craftsmanship are *design constraints*.  I want to learn beyond the software I write, whether it's tools, shop practices, standards, electronics, or whatever the field demands.  I am aiming my energy toward work that will shorten timelines, improve reliability, reduce costs, mitigate risks, increase capacity, and protect lives.
+These five are what I think hold up a free and capable society, and I happen to be building in and for the one I came from.  I like staying close to users and to hardware.  I value plain language and accountability: if I help build it, I help run it.  I treat security, performance, and craftsmanship as design constraints, decided up front.  And I want to keep learning past the code, into tools, shop practice, standards, electronics, whatever the work asks for.
 <br><br>
-If you’re building in manufacturing, defense, finance, law, or space and you care about shipping durable, real-world systems, I’d like to help.
+I have no interest in picking just one of these.  Over a long horizon I want to work across as many as I can, often more than one at a time, and what I'm aiming at is bigger than any single role.  I'd rather build toward it and let the work speak than make promises I haven't earned yet.  If you're building something serious in any of these areas, I'd like to hear about it.
 <br><br><br>
-Brice Duke
+- Brice Duke
 <br><br><br>
 "
 ---
