@@ -1,0 +1,38 @@
+{{ define "main" }}
+{{ if eq .Section "work" }}
+    <h1 class="page-title display-l lockup-wide">our.work</h1>
+    {{- partial "hot-news.html" . -}}
+    {{- partial "project-grid.html" . -}}
+{{ else if eq .Section "writing" }}
+    <h1 class="page-title display-l lockup-wide">writing</h1>
+    <div class="paper-island">
+        <ul class="writing-index">
+            {{ range (slice "/philosophy" "/quotebook" "/reading-list") }}
+                {{ with site.GetPage . }}
+                <li>
+                    <a href="{{ .RelPermalink }}">
+                        <h2 class="writing-index__title">{{ .Title }}</h2>
+                        {{ $blurb := .Params.bio | markdownify | plainify | htmlUnescape | truncate 160 }}
+                        {{ if $blurb }}
+                        <p class="writing-index__blurb">{{ $blurb }}</p>
+                        {{ end }}
+                    </a>
+                </li>
+                {{ end }}
+            {{ end }}
+        </ul>
+    </div>
+{{ else }}
+    <h1 class="page-title display-l">{{ .Title }}</h1>
+    <div class="prose night-copy">
+        {{ .Content }}
+    </div>
+    {{ if .Pages }}
+    <ul class="writing-index">
+        {{ range .Pages }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+    {{ end }}
+{{ end }}
+{{ end }}

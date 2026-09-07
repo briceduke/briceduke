@@ -1,14 +1,17 @@
 {{ define "main" }}
-    <div class="single-container">
-        {{- partial "sidebar.html" . -}}
-        <div class="main-content">
-            {{ if eq .Layout "imprint" }}
-                {{- partial "imprint.html" . -}}
-            {{ else if eq .Layout "information" }}
-                {{- partial "information.html" . -}}
-            {{ else }}
-                {{- partial "content.html" . -}}
-            {{ end }}
-        </div>
-    </div>
+{{ $paper := in (slice "/philosophy/" "/quotebook/" "/reading-list/") .RelPermalink }}
+{{ if eq .Layout "contact" }}
+    <section class="contact-block">
+        <h1 class="page-title display-l lockup-wide">contact.us</h1>
+        <p class="home-lede">Send a note to the studio. Submit opens your mail client.</p>
+        <a class="pill-yellow" href="mailto:{{ .Site.Params.email | default "bricewduke@gmail.com" }}">Submit</a>
+        <p class="contact-meta meta-neon">{{ .Site.Params.email | default "bricewduke@gmail.com" }}</p>
+    </section>
+{{ else if $paper }}
+    {{- partial "paper.html" . -}}
+{{ else if eq .Layout "information" }}
+    {{- partial "information.html" . -}}
+{{ else }}
+    {{- partial "content.html" . -}}
+{{ end }}
 {{ end }}

@@ -1,16 +1,20 @@
-{{ $imgs := findRE "(?i)<(img|figure)\\b" .Content }} {{ $hasImages :=gt (len $imgs) 0 }} {{ if $hasImages }} <div
-    class="images fade-in">
+{{ $imgs := findRE "(?i)<(img|figure)\\b" .Content }}
+{{ $hasImages := gt (len $imgs) 0 }}
+{{ if $hasImages }}
+<div class="project-gallery images">
     {{ .Content }}
-    </div>
+</div>
+{{ end }}
+<article class="night-copy fade-in">
+    <h1 class="page-title display-l">{{ .Title }}</h1>
+    {{ if not .Date.IsZero }}
+    <p class="meta-neon">{{ .Date.Format "Jan 2006" }}</p>
     {{ end }}
-    <article class="fade-in main-content-article{{ if not $hasImages }} no-images{{ end }}">
-        <div class="summary-wrapper">
-            <div class="summary">
-                {{ with .Params.summary }}
-                {{ . | markdownify }}
-                {{ else }}
-                {{ .Summary }}
-                {{ end }}
-            </div>
-        </div>
-    </article>
+    <div class="prose">
+        {{ with .Params.summary }}
+            {{ . | markdownify }}
+        {{ else }}
+            {{ .Summary }}
+        {{ end }}
+    </div>
+</article>

@@ -1,10 +1,12 @@
 {{ define "main" }}
-<div class="home-container">
-    {{- partial "sidebar.html" . -}}
-    <div class="main-content">
-        {{ range first 1 .Site.Menus.about }}
-        {{- partial "information.html" .Page -}}
-        {{ end }}
-    </div>
-</div>
+<header class="masthead">
+    <h1 class="lockup-hero lockup-wide display-xl">brice.duke</h1>
+    {{ with site.GetPage "/information" }}
+        {{ $plain := .Params.bio | plainify | htmlUnescape }}
+        <p class="home-lede">{{ delimit (first 1 (split $plain ".")) "" }}.</p>
+    {{ end }}
+</header>
+{{- partial "hot-news.html" . -}}
+<h2 class="section-bar">our.work</h2>
+{{- partial "project-grid.html" . -}}
 {{ end }}

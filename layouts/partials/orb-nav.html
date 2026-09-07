@@ -1,0 +1,37 @@
+{{ $current := "work" }}
+{{ if .IsHome }}
+    {{ $current = "home" }}
+{{ else if or (eq .RelPermalink "/contact/") (eq .Layout "contact") }}
+    {{ $current = "contact" }}
+{{ else if or (eq .RelPermalink "/information/") (eq .RelPermalink "/about/") }}
+    {{ $current = "about" }}
+{{ else if or (eq .RelPermalink "/writing/") (eq .RelPermalink "/philosophy/") (eq .RelPermalink "/quotebook/") (eq .RelPermalink "/reading-list/") }}
+    {{ $current = "writing" }}
+{{ else if eq .RelPermalink "/work/" }}
+    {{ $current = "work" }}
+{{ else if eq .Params.menus "main" }}
+    {{ $current = "work" }}
+{{ end }}
+
+<nav class="orb-nav" aria-label="Primary">
+    <a class="orb" href="{{ "/" | relURL }}" {{ if eq $current "home" }}aria-current="page"{{ end }}>
+        <span class="orb__sphere" aria-hidden="true"></span>
+        <span class="orb__label">home</span>
+    </a>
+    <a class="orb" href="{{ "/work/" | relURL }}" {{ if eq $current "work" }}aria-current="page"{{ end }}>
+        <span class="orb__sphere" aria-hidden="true"></span>
+        <span class="orb__label">our.work</span>
+    </a>
+    <a class="orb" href="{{ "/writing/" | relURL }}" {{ if eq $current "writing" }}aria-current="page"{{ end }}>
+        <span class="orb__sphere" aria-hidden="true"></span>
+        <span class="orb__label">writing</span>
+    </a>
+    <a class="orb" href="{{ "/information/" | relURL }}" {{ if eq $current "about" }}aria-current="page"{{ end }}>
+        <span class="orb__sphere" aria-hidden="true"></span>
+        <span class="orb__label">about</span>
+    </a>
+    <a class="orb" href="{{ "/contact/" | relURL }}" {{ if eq $current "contact" }}aria-current="page"{{ end }}>
+        <span class="orb__sphere" aria-hidden="true"></span>
+        <span class="orb__label">contact.us</span>
+    </a>
+</nav>

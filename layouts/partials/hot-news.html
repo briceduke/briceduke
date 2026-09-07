@@ -1,0 +1,10 @@
+{{ $projects := partial "project-pages.html" . }}
+{{ with index $projects 0 }}
+<div class="hot-news">
+    <span class="hot-news__pill">Hot News</span>
+    <a class="hot-news__headline" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ if not .Date.IsZero }}
+    <time class="hot-news__time" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+    {{ end }}
+</div>
+{{ end }}

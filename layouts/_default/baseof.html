@@ -1,138 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="night-studio">
 {{- partial "head.html" . -}}
-
-<body class="{{ if .IsHome }}home{{ end }}">
-    <div id="content">
-        {{- block "main" . }}{{- end }}
+<body class="stage-shell{{ if .IsHome }} is-home{{ end }}">
+    <a class="skip-link" href="#main">Skip to content</a>
+    {{ if .IsHome }}
+        {{- partial "splash.html" . -}}
+    {{ end }}
+    <div class="stage">
+        {{- partial "orb-nav.html" . -}}
+        {{- partial "ticker.html" . -}}
+        <main id="main" tabindex="-1">
+            {{- block "main" . }}{{- end }}
+        </main>
+        {{- partial "footer.html" . -}}
     </div>
-
-    <div id="imageModal" class="modal">
-        <span class="close"></span>
-        <img class="modal-content" id="modalImage">
+    <div id="imageModal" class="modal" hidden>
+        <button type="button" class="close" aria-label="Close image">×</button>
+        <img class="modal-content" id="modalImage" alt="">
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const isMobile = window.innerWidth < 768;
-
-            var modal = document.getElementById('imageModal');
-            var modalImg = document.getElementById('modalImage');
-            var closeBtn = document.getElementsByClassName('close')[0];
-
-            document.querySelectorAll('.images img').forEach(function (img) {
-                if (!isMobile) {
-                    img.onclick = function () {
-                        modal.classList.add('show');
-                        modalImg.src = this.src;
-                    }
-                }
-            });
-
-            function closeModal() {
-                modal.classList.remove('show');
-            }
-
-            closeBtn.onclick = closeModal;
-
-            window.onclick = function (event) {
-                if (event.target == modal) {
-                    closeModal();
-                }
-            }
-
-            // Check if summary is scrollable and add gradient
-            let scrollHandler = null;
-
-            function checkSummaryScrollable() {
-                const summary = document.querySelector('.summary');
-                const wrapper = document.querySelector('.summary-wrapper');
-                if (!summary || !wrapper) return;
-
-                // Don't enable scroll gradients on mobile/tablet (where layout is vertical)
-                const isMobile = window.innerWidth <= 1200;
-                if (isMobile) {
-                    wrapper.classList.remove('scrollable-top', 'scrollable-bottom', 'show-top', 'show-bottom');
-                    return;
-                }
-
-                // Get background color from computed styles
-                const bodyBgColor = window.getComputedStyle(document.body).backgroundColor || '#101010';
-
-                // Set gradient colors dynamically
-                const style = document.createElement('style');
-                style.id = 'summary-gradient-style';
-                const existingStyle = document.getElementById('summary-gradient-style');
-                if (existingStyle) {
-                    existingStyle.remove();
-                }
-                style.textContent = `
-                    .summary-wrapper.scrollable-top::before {
-                        background: linear-gradient(to bottom, 
-                            ${bodyBgColor} 0%,
-                            rgba(0, 0, 0, 0.4) 30%,
-                            transparent 100%) !important;
-                    }
-                    .summary-wrapper.scrollable-bottom::after {
-                        background: linear-gradient(to bottom, 
-                            transparent 0%, 
-                            rgba(0, 0, 0, 0.4) 70%,
-                            ${bodyBgColor} 100%) !important;
-                    }
-                `;
-                document.head.appendChild(style);
-
-                // Remove old scroll handler if it exists
-                if (scrollHandler) {
-                    summary.removeEventListener('scroll', scrollHandler);
-                    scrollHandler = null;
-                }
-
-                function updateGradients() {
-                    const isScrollable = summary.scrollHeight > summary.clientHeight;
-                    if (!isScrollable) {
-                        wrapper.classList.remove('scrollable-top', 'scrollable-bottom', 'show-top', 'show-bottom');
-                        return;
-                    }
-
-                    // Check scroll position
-                    const scrollTop = summary.scrollTop;
-                    const isAtTop = scrollTop <= 2;
-                    const isAtBottom = summary.scrollHeight - scrollTop <= summary.clientHeight + 2;
-
-                    // Add base classes if scrollable
-                    wrapper.classList.add('scrollable-top', 'scrollable-bottom');
-
-                    // Show/hide top gradient
-                    if (isAtTop) {
-                        wrapper.classList.remove('show-top');
-                    } else {
-                        wrapper.classList.add('show-top');
-                    }
-
-                    // Show/hide bottom gradient
-                    if (isAtBottom) {
-                        wrapper.classList.remove('show-bottom');
-                    } else {
-                        wrapper.classList.add('show-bottom');
-                    }
-                }
-
-                const isScrollable = summary.scrollHeight > summary.clientHeight;
-                if (isScrollable) {
-                    scrollHandler = updateGradients;
-                    summary.addEventListener('scroll', scrollHandler);
-                }
-
-                updateGradients();
-            }
-
-            // Check on load and resize
-            setTimeout(checkSummaryScrollable, 100);
-            window.addEventListener('resize', function () {
-                setTimeout(checkSummaryScrollable, 100);
-            });
-        });
-    </script>
+    {{ $js := resources.Get "js/stage.js" }}
+    <script src="{{ $js.RelPermalink }}" defer></script>
 </body>
-
 </html>

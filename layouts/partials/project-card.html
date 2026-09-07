@@ -1,0 +1,36 @@
+{{ $page := . }}
+{{ $img := false }}
+{{ with $page.Resources.GetMatch "{landing,home}*" }}
+    {{ $img = . }}
+{{ else }}
+    {{ $firstName := "" }}
+    {{ range findRE `src="[^"]+"` $page.RawContent }}
+        {{ if not $firstName }}
+            {{ $firstName = replaceRE `^src="|"$` "" . }}
+        {{ end }}
+    {{ end }}
+    {{ with $page.Resources.GetMatch $firstName }}
+        {{ $img = . }}
+    {{ else }}
+        {{ $images := $page.Resources.ByType "image" }}
+        {{ if gt (len $images) 0 }}
+            {{ $img = index $images 0 }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+<article class="project-card">
+    <a href="{{ $page.RelPermalink }}">
+        {{ with $img }}
+            {{ $thumb := .Fill "800x600 Center webp q75" }}
+            <img class="project-card__media" src="{{ $thumb.RelPermalink }}" alt="{{ $page.Title }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" loading="lazy">
+        {{ else }}
+            <div class="project-card__media project-card__media--ph texture-wireframe" aria-hidden="true">
+                <span class="project-card__ph-label">{{ $page.Title }}</span>
+            </div>
+        {{ end }}
+        <h3 class="project-card__title">{{ $page.Title }}</h3>
+        {{ if not $page.Date.IsZero }}
+        <p class="project-card__meta">{{ $page.Date.Format "Jan 2006" }}</p>
+        {{ end }}
+    </a>
+</article>

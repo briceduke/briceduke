@@ -1,0 +1,6 @@
+{{ $email := .Site.Params.email | default "bricewduke@gmail.com" }}
+<footer class="footer-stamp stage-footer">
+    <p>briceduke.dev · Hugo · STAGE · {{ now.Year }} · <a href="mailto:{{ $email }}">email</a></p>
+    <button type="button" class="frames-toggle" aria-pressed="false">Frames | No Frames</button>
+</footer>
+<div class="wire-band texture-wireframe" aria-hidden="true"></div>

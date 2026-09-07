@@ -1,0 +1,6 @@
+{{ $projects := partial "project-pages.html" . }}
+<div class="project-grid">
+    {{ range $projects }}
+        {{- partial "project-card.html" . -}}
+    {{ end }}
+</div>

@@ -1,0 +1,7 @@
+{{ $projects := slice }}
+{{ range site.Menus.main }}
+    {{ with .Page }}
+        {{ $projects = $projects | append . }}
+    {{ end }}
+{{ end }}
+{{ return sort $projects "Date" "desc" }}

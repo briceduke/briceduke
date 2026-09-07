@@ -1,0 +1,14 @@
+{{ $projects := partial "project-pages.html" . }}
+{{ $items := slice }}
+{{ range $projects }}
+    {{ $items = $items | append .Title }}
+{{ end }}
+{{ $copy := delimit $items "  ·  " }}
+{{ if $copy }}
+<div class="news-ticker" aria-hidden="true">
+    <div class="news-ticker__track">
+        <span>{{ $copy }}  ·  STAGE  ·  {{ $copy }}  ·  STAGE  ·  </span>
+        <span>{{ $copy }}  ·  STAGE  ·  {{ $copy }}  ·  STAGE  ·  </span>
+    </div>
+</div>
+{{ end }}

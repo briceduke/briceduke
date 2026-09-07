@@ -1,6 +1,11 @@
 baseURL = 'http://briceduke.dev/'
 languageCode = 'en-us'
 title = 'Brice Duke'
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  email = 'bricewduke@gmail.com'
+  lockup = 'brice.duke'
 
 [markup]
   [markup.goldmark]
