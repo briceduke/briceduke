@@ -4,9 +4,11 @@ menu: "about" # don't change
 layout: "information" # don't change
 
 bio: "**Currently Reading**<br>
-[Isaac Asimov - Foundation](https://en.wikipedia.org/wiki/Foundation_(Asimov_novel))<br>
+[Ron Chernow - Titan: The Life of John D. Rockefeller, Sr.](https://en.wikipedia.org/wiki/Titan:_The_Life_of_John_D._Rockefeller,_Sr.)<br>
 
 **Recently Read**<br>
+[Isaac Asimov - Foundation](https://en.wikipedia.org/wiki/Foundation_(Asimov_novel))<br>
+[Arthur Herman - Freedom's Forge](https://www.penguinrandomhouse.com/books/208564/freedoms-forge-by-arthur-herman/)<br>
 [Andy Weir - Project Hail Mary](https://en.wikipedia.org/wiki/Project_Hail_Mary)<br>
 [Walter Isaacson - Elon Musk](https://en.wikipedia.org/wiki/Elon_Musk_(Isaacson_book))<br>
 [Theodore Roosevelt - The Rough Riders](https://www.bartleby.com/lit-hub/the-rough-riders/)<br>
